@@ -1,0 +1,13 @@
+# Claude Code local-only files (not shared across teams)
+.claude/settings.local.json
+CLAUDE.local.md
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+*.swp
+*.swo
+*~
+.vscode/settings.json

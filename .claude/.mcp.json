@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "_example-stdio": {
+      "_comment": "Example stdio MCP server. Rename by removing underscore prefix to enable.",
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@anthropic-ai/mcp-server-example"]
+    },
+    "_example-http": {
+      "_comment": "Example HTTP MCP server.",
+      "type": "http",
+      "url": "http://localhost:8080/mcp"
+    }
+  }
+}
