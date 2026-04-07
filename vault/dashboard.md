@@ -16,9 +16,13 @@ Master overview of all projects, lessons, and proven patterns.
 |---------|--------|------|
 | Cisco Inventory | .claude/ setup complete, pushed to quick-macros | [[cisco-inventory]] |
 
+## Recent Sessions
+
+- [[2026-04-07]] — Cisco .claude/ build + Obsidian vault setup
+
 ## Recent Lessons
 
-- [[2026-04-07]] — First full .claude/ build: hooks, agents, skills, review process
+- [[2026-04-07]] — Hook gotchas, agent teams, review process, Obsidian skill selection
 
 ## Proven Patterns
 
