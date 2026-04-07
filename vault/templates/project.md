@@ -3,6 +3,7 @@ title: "{{project-name}}"
 type: project
 status: in-progress
 start_date: {{date}}
+pushed_date:
 tags:
   - project
 ---
@@ -21,6 +22,18 @@ One paragraph: what this project does and why.
 | Skills | | |
 | Hooks | | |
 | Rules | | |
+
+## Current Status
+
+- **Branch:** {{branch}}
+- **Last commit:**
+- **Uncommitted:** none
+- **Open PRs:** none
+- **Updated:** {{date}}
+
+## Ideas / Inbox
+
+-
 
 ## Repos
 

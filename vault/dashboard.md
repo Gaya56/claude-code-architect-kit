@@ -12,9 +12,10 @@ Master overview of all projects, lessons, and proven patterns.
 
 ## Active Projects
 
-| Project | Status | Link |
-|---------|--------|------|
-| Cisco Inventory | .claude/ setup complete, pushed to quick-macros | [[cisco-inventory]] |
+| Project | Branch | Status | Link |
+|---------|--------|--------|------|
+| Architect Kit | cisco-inventory-setup | active — adding project tracking | [[architect-kit]] |
+| Cisco Inventory | quick-macros | complete — .claude/ setup pushed | [[cisco-inventory]] |
 
 ## Recent Sessions
 

@@ -26,6 +26,8 @@ It builds and tests `.claude/` setups here, then copies or symlinks them into ta
 | `/save-and-compact` | Save session state to memory, then compact |
 | `/update-vault` | Capture lessons, update project status, record proven patterns |
 | `/obsidian-markdown` | Write correct Obsidian syntax — wikilinks, callouts, embeds, frontmatter, tags |
+| `/obsidian-bases` | Create database-like views (.base files) with filters, formulas, and summaries |
+| `/project-status` | Snapshot git state across tracked repos into the vault |
 
 ## Agents
 
