@@ -15,6 +15,8 @@ Master overview of all projects, lessons, and proven patterns.
 | Project | Branch | Status | Link |
 |---------|--------|--------|------|
 | Architect Kit | cisco-inventory-setup | active — adding project tracking | [[architect-kit]] |
+| MollyCall | claude-architect | active — organize + obsidian integration | [[mollycall]] |
+| openclaw-team-ops | claude-architecture | active — enhance setup, keep behavior | [[openclaw-team-ops]] |
 | Cisco Inventory | quick-macros | complete — .claude/ setup pushed | [[cisco-inventory]] |
 
 ## Recent Sessions

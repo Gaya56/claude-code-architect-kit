@@ -13,6 +13,8 @@ It builds and tests `.claude/` setups here, then copies or symlinks them into ta
 | Project | Directory | Target Repo | Status |
 |---------|-----------|-------------|--------|
 | Cisco Inventory | `cisco-inventory/` | [Gaya56/Cisco-Inventory](https://github.com/Gaya56/Cisco-Inventory/tree/quick-macros) | Complete |
+| MollyCall | — | [Gaya56/MollyCall](https://github.com/Gaya56/MollyCall/tree/claude-architect) | Active |
+| openclaw-team-ops | — | [Gaya56/openclaw-team-ops](https://github.com/Gaya56/openclaw-team-ops/tree/claude-architecture) | Active |
 
 ## Skills
 
