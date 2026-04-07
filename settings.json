@@ -1,0 +1,56 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git status)",
+      "Bash(git status *)",
+      "Bash(git log *)",
+      "Bash(git diff *)",
+      "Bash(git branch *)",
+      "Bash(git branch)",
+      "Bash(git show *)",
+      "Bash(git remote -v)",
+      "Bash(git fetch *)",
+      "Bash(git ls-files *)",
+      "Bash(git rev-parse *)",
+      "Read(.claude/**)",
+      "Read(CLAUDE.md)",
+      "Read(**/CLAUDE.md)"
+    ],
+    "ask": [
+      "Bash(git checkout *)",
+      "Bash(git switch *)",
+      "Bash(git merge *)",
+      "Bash(git rebase *)",
+      "Bash(git commit *)",
+      "Bash(git stash *)",
+      "Write(.claude/**)",
+      "Write(CLAUDE.md)",
+      "Write(**/CLAUDE.md)",
+      "Edit(.claude/**)",
+      "Edit(CLAUDE.md)",
+      "Edit(**/CLAUDE.md)"
+    ],
+    "deny": [
+      "Bash(git push *)",
+      "Bash(git push)",
+      "Bash(git reset --hard *)",
+      "Bash(git clean -fd *)",
+      "Bash(rm -rf *)"
+    ]
+  },
+  "workflow": {
+    "primaryRepo": "https://github.com/Gaya56/claude-code-architect-kit.git",
+    "otherRepos": {
+      "allowedPaths": [
+        ".claude/**",
+        "CLAUDE.md"
+      ],
+      "requiresPermission": true,
+      "requiresLocalTest": true,
+      "workflow": "1) Build in primary repo → 2) Test locally → 3) Ask permission → 4) Copy to other repo"
+    }
+  },
+  "notes": {
+    "_readme": "Primary repo (claude-code-architect-kit): full write access with ask. Other repos: read-only EXCEPT .claude/ and CLAUDE.md which can be copied AFTER testing locally AND getting explicit permission."
+  }
+}
