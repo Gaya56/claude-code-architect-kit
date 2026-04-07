@@ -1,59 +1,60 @@
 # Cisco Inventory Claude Setup
 
-This folder defines the Claude Code setup we want for the `quick-macros` branch of the Cisco Inventory project. The goal is to give the repo a flexible, reliable `.claude/` foundation with a clear `CLAUDE.md`, focused agents, practical hooks, and lightweight rules that improve research and terminal workflows without adding unnecessary complexity.
+This folder defines the Claude Code setup for the `quick-macros` branch of the Cisco Inventory project. It gives the repo a flexible `.claude/` foundation with focused agents, practical skills, lightweight hooks, and clear rules for managing Cisco RoomOS devices via the Webex API.
 
-The setup should prioritize official Cisco, Webex, RoomOS, and official GitHub documentation first, then fall back to trusted secondary sources only when official references are incomplete. It should help collect accurate commands, API references, and working examples from real documentation so changes stay grounded in sources we trust, especially from `https://developer.webex.com/` and RoomOS documentation.
+## What This Repo Does
 
-The workflow side should stay simple and safe. During local development in this codespace, terminal usage should be read-only against Webex Control Hub data through environment-based API access, with no destructive changes. When this setup is later moved into the `Cisco-Inventory` repository on `quick-macros`, execution capabilities can be added carefully, but they must remain conservative and avoid breaking or unintentionally changing anything in Control Hub. Hooks should remain fast and bounded, with a target runtime of no more than `3-5` minutes.
+Manages Cisco RoomOS devices across 16 Canadian PwC locations via the Webex REST API. Operations include deploying macros, removing outdated macros, pushing configs, and troubleshooting devices — all done city-by-city with careful validation.
 
-## Current Repo Review: `https://github.com/Gaya56/Cisco-Inventory.git`
+## Setup Overview
 
-The `quick-macros` branch already contains several useful working areas that show this repo is centered on Cisco room device automation, macro development, and device-specific operational work. At the top level there are folders for quick macros, config push workflows, shutdown macro release material, room device macro samples, testing room scripts, and device-specific content such as `Room Bar Pro Device` as a example repo.
+| Component | Count | Purpose |
+|-----------|-------|---------|
+| Skills | 3 | `/webex-research`, `/device-check`, `/cross-check` — primary user interface |
+| Agents | 3 | lead (coordinator), researcher (docs), validator (API checks) |
+| Hooks | 2 | Token check, cross-check reminder before mutations |
+| Rules | 2 | Safety (read-free, execute with permission) and source priority |
 
-The branch also already includes supporting documentation and tooling patterns that can guide the Claude setup. There is a `.github/agents` directory, deployment and audit material under `Shutdown-Macro-Release`, location-based config push folders, a `Terminal_commands.MD` file, and an environment configuration file. That makes this a good candidate for a focused `.claude/` layer that organizes research, terminal validation, and short-running hook workflows around assets that already exist.
+See [INDEX.md](INDEX.md) for the full map of every file and its purpose.
 
-| Existing repo area | What is already there |
-|--------------------|-----------------------|
-| `.github` | An existing `agents` directory is already present |
-| `quick_macros` | A `2577-resolution-auto-reboot` macro area exists |
-| `config-push` | Site-specific config folders such as `CA-CALG-BP1-32` and `CA-EDMO-BP-2204` |
-| `Shutdown-Macro-Release` | `CLAUDE.md`, `README.md`, deployment commands, audit summary, final shutdown macro, and inventory data |
-| `roomdevices-macros-samples` | A large collection of room device macro sample content |
-| Other top-level content | `Calgary_Testing_Room_Scripts`, `Room Bar Pro Device`, `Terminal_commands.MD`, and environment config |
+## Safety
 
-| Area | Goal |
-|------|------|
-| Repository target | `Cisco-Inventory` on branch `quick-macros` |
-| Main deliverables | `CLAUDE.md`, `.claude/agents`, `.claude/hooks`, `.claude/skills`, `.claude/rules`, `.claude/settings` |
-| Core priority | Better tooling, guidance, and workflow support |
-| Reference model | `deploy-watcher.md` is a pattern only, not the final implementation |
+- Read operations run freely. Mutations require explicit user approval.
+- Only operates on Canadian PwC devices (`CA-<CITY_TAG>-<ROOM_NUMBER>`).
+- Official sources first: `developer.webex.com`, `roomos.cisco.com`, official Cisco docs.
+- Environment-based credentials only — never hardcode tokens.
+- Hooks are fast (under 1 second) and non-blocking for read operations.
 
-| Agent or Capability | Purpose |
-|---------------------|---------|
-| Research agent | Search official docs and official GitHub repos for commands, API usage, and reference snippets |
-| Terminal and workflow agent | Handle local read-only API checks, status updates, and carefully scoped validation workflows |
-| Hooks | Provide short background checks and clear pass/fail status updates |
+## Source Priority
 
-| Guardrail | Requirement |
-|-----------|-------------|
-| Source quality | Official sources first, trusted secondary sources only if needed |
-| Local API usage | Read Control Hub data locally through environment-based credentials without exposing or storing secrets |
-| Safety | Prefer read-only actions first, and only allow future execution in the target repo with explicit caution |
-| Flexibility | Keep the setup modular and easy to extend |
-| Hook runtime | Each hook should finish within `3-5` minutes |
+1. `developer.webex.com` — Webex API endpoints, authentication, examples
+2. `roomos.cisco.com` — RoomOS device behavior, macro runtime, xAPI reference
+3. Official Cisco documentation — platform and device reference
+4. Official Cisco GitHub repos — working code samples
+5. Trusted secondary sources — only when official sources are incomplete
 
-| Success Criteria | Pass Condition |
-|------------------|----------------|
-| Claude setup exists | `CLAUDE.md` and the main `.claude/` structure are defined clearly |
-| Research is grounded | Official Webex, Cisco, RoomOS, and official GitHub sources are the default references |
-| Local terminal workflow is safe | Local terminal commands read data only and do not modify Control Hub |
-| Future execution is controlled | Any later execute capability is added carefully in `Cisco-Inventory` on `quick-macros` |
-| Hooks stay lightweight | Each hook completes within `3-5` minutes and reports clear status |
+## Current Repo: `https://github.com/Gaya56/Cisco-Inventory/tree/quick-macros`
 
-| Source Priority | Default Use |
-|-----------------|-------------|
-| `developer.webex.com` | Primary source for Webex API behavior, authentication, and examples |
-| `roomos.cisco.com` docs | Primary source for RoomOS device behavior and macro guidance |
-| Official Cisco docs | Primary source for platform and device reference material |
-| Official GitHub repos | Preferred source for working command snippets and implementation patterns |
-| Trusted secondary sources | Use only when official sources do not cover the need clearly |
+The `quick-macros` branch contains working areas for macro development, device configs, deployment material, and testing scripts.
+
+| Existing Repo Area | What Is There |
+|--------------------|---------------|
+| `Shutdown-Macro-Release/` | Production macro, deployment commands, inventory data, audit material |
+| `quick_macros/` | Supporting macro samples (e.g., auto-reboot) |
+| `config-push/` | Site-specific config folders (`CA-CALG-BP1-32`, `CA-EDMO-BP-2204`) |
+| `roomdevices-macros-samples/` | Cisco SDK macro examples |
+| `Calgary_Testing_Room_Scripts/` | Integration test scripts |
+| `Room Bar Pro Device/` | Device-specific test macros |
+| `.github/agents/` | Existing GitHub agent specs |
+
+## Obsidian Vault
+
+The `vault/` directory provides a simple Obsidian-compatible workspace for tracking proven commands, deployment progress, and daily notes. See [vault/](vault/) for templates.
+
+## How to Use
+
+1. Copy or symlink this `.claude/` directory into the Cisco-Inventory repo
+2. Run `source .env` to load your Webex API token
+3. Use `/webex-research [topic]` to find docs and commands
+4. Use `/device-check [device or city]` to validate device state
+5. Use `/cross-check [topic]` to compare docs vs API results before executing
