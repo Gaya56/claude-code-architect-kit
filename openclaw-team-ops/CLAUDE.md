@@ -39,6 +39,17 @@ vault/                 # Obsidian knowledge base (searchable project history)
 |-------|-------|------|
 | code-inspector | haiku | Read-only code Q&A — file paths, line numbers, call flow |
 | obsidian | haiku | Vault manager — stores, finds, links project knowledge |
+| researcher | sonnet | Web search + Context7 doc verification for OpenClaw info |
+
+### Researcher agent
+
+Runs in the background with short status updates. Use it to:
+- Search OpenClaw docs, GitHub issues, and articles
+- Verify configs against official docs (WebSearch → Context7 confirms)
+- Find examples and best practices
+- Use `/openclaw-search [query]` to invoke directly
+
+Flow: researcher finds → main agent approves → obsidian stores worthy findings.
 
 ### Obsidian agent
 

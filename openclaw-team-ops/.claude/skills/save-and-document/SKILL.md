@@ -1,7 +1,7 @@
 ---
 name: save-and-document
 description: "End-of-session save and document. Captures decisions made, changes applied, and current state. Updates memory files. Use when the user says end of session, save state, wrap up, or document what we did."
-user-invokable: true
+user-invocable: true
 ---
 
 # Save and Document — End of Session
