@@ -1,0 +1,11 @@
+filters:
+  and:
+    - file.inFolder("sessions")
+    - file.hasTag("session")
+views:
+  - type: table
+    name: "All Sessions"
+    order:
+      - date
+      - area
+      - file.name

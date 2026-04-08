@@ -1,0 +1,14 @@
+filters:
+  and:
+    - file.inFolder("decisions")
+    - file.hasTag("decision")
+views:
+  - type: table
+    name: "All Decisions"
+    groupBy:
+      property: area
+      direction: ASC
+    order:
+      - date
+      - status
+      - file.name

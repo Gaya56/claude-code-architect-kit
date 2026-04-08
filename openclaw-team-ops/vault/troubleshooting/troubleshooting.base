@@ -1,0 +1,12 @@
+filters:
+  and:
+    - file.inFolder("troubleshooting")
+    - file.hasTag("troubleshooting")
+views:
+  - type: table
+    name: "All Issues"
+    order:
+      - severity
+      - date
+      - status
+      - file.name

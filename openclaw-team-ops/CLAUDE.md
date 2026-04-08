@@ -23,7 +23,32 @@ data/
   member-b/workspace/
 
 tasks/                 # Planning notes
+
+vault/                 # Obsidian knowledge base (searchable project history)
+  dashboard.md         # Overview + links to all sections
+  sessions/            # Dated session logs
+  decisions/           # Why we chose X over Y
+  troubleshooting/     # Bug + fix pairs (grows expertise)
+  patterns/            # Proven reusable workflows
+  templates/           # Templates for each note type
 ```
+
+## Agents
+
+| Agent | Model | Role |
+|-------|-------|------|
+| code-inspector | haiku | Read-only code Q&A — file paths, line numbers, call flow |
+| obsidian | haiku | Vault manager — stores, finds, links project knowledge |
+
+### Obsidian agent
+
+Runs in the background. Use it to:
+- Log what happened after a session or decision
+- Search vault for related past notes before starting work
+- Record bugs and fixes in troubleshooting/
+- Extract proven patterns into patterns/
+
+It will notify you when it finishes writing. Scope: `vault/` only — never touches code or config.
 
 ## Running the instances
 
