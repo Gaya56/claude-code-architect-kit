@@ -19,7 +19,8 @@ Project knowledge base for openclaw-team-ops.
 
 ## Recent Activity
 
-_Updated by the obsidian agent after each session._
+- **2026-04-08** — First hook built (SessionStart preflight), 5 examples reviewed, 7 bugs documented → [[sessions/2026-04-08-first-hook]]
+- **2026-04-08** — Hooks & rules reference stored → [[patterns/hooks-and-rules-reference]]
 
 ## Quick Links
 
