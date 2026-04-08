@@ -16,15 +16,17 @@ Master overview of all projects, lessons, and proven patterns.
 |---------|--------|--------|------|
 | Architect Kit | cisco-inventory-setup | active — adding project tracking | [[architect-kit]] |
 | MollyCall | claude-architect | active — organize + obsidian integration | [[mollycall]] |
-| openclaw-team-ops | claude-architecture | active — enhance setup, keep behavior | [[openclaw-team-ops]] |
+| openclaw-team-ops | claude-architecture | active — 7.5/10, hooks + rules next | [[openclaw-team-ops]] |
 | Cisco Inventory | quick-macros | complete — .claude/ setup pushed | [[cisco-inventory]] |
 
 ## Recent Sessions
 
+- [[2026-04-08]] — openclaw buildout: agents, vault, skills, save-and-compact
 - [[2026-04-07]] — Cisco .claude/ build + Obsidian vault setup
 
 ## Recent Lessons
 
+- [[2026-04-08-openclaw-buildout]] — Code-reviewer false positives, skills frontmatter injects content, push to external repos
 - [[2026-04-07]] — Hook gotchas, agent teams, review process, Obsidian skill selection
 
 ## Proven Patterns

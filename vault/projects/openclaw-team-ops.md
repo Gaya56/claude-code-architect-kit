@@ -18,27 +18,24 @@ Team operations repo built around openclaw (git submodule). Manages per-member A
 
 | Component | Count | Details |
 |-----------|-------|---------|
-| Agents | 1 | code-inspector |
-| Skills | 2 | save-and-compact, save-and-document |
+| Agents | 3 | code-inspector, obsidian, researcher |
+| Skills | 4 | save-and-compact, save-and-document, defuddle, openclaw-search |
+| Vault | 4 folders | sessions, decisions, troubleshooting, patterns + bases |
 | Hooks | 0 | None yet |
 | Rules | 0 | None yet |
 
 ## Current Status
 
 - **Branch:** claude-architecture
-- **Last commit:** Merge PR #1 from peyman branch + code-inspector improvements
-- **Uncommitted:** unknown — check with `/project-status`
-- **Open PRs:** none known
-- **Updated:** 2026-04-07
-
-> [!warning] settings.local.json is committed
-> Should be added to .gitignore — may contain API keys or personal overrides.
+- **Rating:** ~7.5/10 (was 5.5/10)
+- **Last push:** 2026-04-08 — agents, skills, vault, save-and-compact update
+- **Open PRs:** none
+- **Updated:** 2026-04-08
 
 ## Ideas / Inbox
 
-- Add hooks and rules to strengthen the setup
-- Improve agent configuration — keep current behavior, enhance capabilities
-- Gitignore settings.local.json
+- Brainstorm hooks — health checks, session start, safety guards
+- Brainstorm rules — code-style, security, docker-safety
 - Has `.github/agents/` and `.github/instructions/` alongside `.claude/` — review for conflicts
 
 ## Repos
@@ -48,11 +45,19 @@ Team operations repo built around openclaw (git submodule). Manages per-member A
 ## Lessons Learned
 
 > [!tip] Link to lesson entries
-> - (none yet — first tracking session)
+> - [[2026-04-08-openclaw-buildout]] — Full buildout session, code-reviewer false positives, skills frontmatter discovery
+
+## Completed
+
+- [x] Review current behavior before making changes
+- [x] Add obsidian agent + vault structure
+- [x] Add researcher agent + openclaw-search skill
+- [x] Update save-and-compact with full template
+- [x] Fix settings.local.json gitignore issue
+- [x] Push to claude-architecture branch
 
 ## Next Steps
 
-- [ ] Review current behavior before making changes
-- [ ] Plan enhancements — hooks, rules, additional agents
-- [ ] Fix settings.local.json gitignore issue
-- [ ] Preserve what's working — user likes current behavior
+- [ ] Brainstorm and add hooks
+- [ ] Brainstorm and add rules
+- [ ] Review .github/agents/ for conflicts with .claude/agents/
