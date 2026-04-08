@@ -12,6 +12,8 @@ tools:
   - Read
   - Grep
   - Glob
+skills:
+  - defuddle
 ---
 
 # OpenClaw Researcher
