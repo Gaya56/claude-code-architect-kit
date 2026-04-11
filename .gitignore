@@ -11,3 +11,13 @@ Thumbs.db
 *.swo
 *~
 .vscode/settings.json
+
+# Secrets
+*.env
+
+# Cloned repos (keep local, don't push)
+claude-code-examples/Agent-Skills-for-Context-Engineering/
+claude-code-examples/agentskills-spec/
+claude-code-examples/awesome-claude-skills/
+claude-code-examples/humanizer/
+claude-code-examples/obsidian-skills/

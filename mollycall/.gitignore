@@ -1,0 +1,28 @@
+# Environment
+.env
+.env.deploy
+
+# Google service account keys
+*.json
+!package.json
+!package-lock.json
+!tsconfig.json
+!.claude/settings.json
+!.eslintrc.json
+
+# Python
+__pycache__/
+*.pyc
+.mypy_cache/
+
+# Logs
+logs/
+*.env.local
+.claude/tmp/
+
+# Client brief review — secrets and internal pricing
+voice-humanization-research/client-brief-review/Molly-CLIENT_ID.md
+voice-humanization-research/client-brief-review/Product List - Product List (Internal).csv
+
+# Memory MCP local store
+.memory/

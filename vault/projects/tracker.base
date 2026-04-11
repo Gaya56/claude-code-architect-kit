@@ -1,0 +1,13 @@
+filters:
+  and:
+    - file.inFolder("projects")
+    - file.hasTag("project")
+
+views:
+  - type: table
+    name: "All Projects"
+    order:
+      - file.name
+      - status
+      - start_date
+      - file.mtime

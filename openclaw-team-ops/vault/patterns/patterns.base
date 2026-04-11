@@ -1,0 +1,13 @@
+filters:
+  and:
+    - file.inFolder("patterns")
+    - file.hasTag("pattern")
+views:
+  - type: table
+    name: "All Patterns"
+    groupBy:
+      property: category
+      direction: ASC
+    order:
+      - file.name
+      - project
